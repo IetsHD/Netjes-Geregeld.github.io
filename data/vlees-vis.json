@@ -1,25 +1,25 @@
 [
   {
-    "id": 14,
+    "id": 1,
+    "name": "Kalkoen",
+    "category": "Vlees/Vis",
+    "price": 10
+  },
+  {
+    "id": 2,
     "name": "Kip",
     "category": "Vlees/Vis",
     "price": 10
   },
   {
-    "id": 15,
-    "name": "Varken",
-    "category": "Vlees/Vis",
-    "price": 10
-  },
-  {
-    "id": 16,
+    "id": 3,
     "name": "Rood vlees",
     "category": "Vlees/Vis",
     "price": 10
   },
   {
-    "id": 17,
-    "name": "Kalkoen",
+    "id": 4,
+    "name": "Varken",
     "category": "Vlees/Vis",
     "price": 10
   }

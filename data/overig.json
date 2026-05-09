@@ -1,14 +1,116 @@
 [
   {
     "id": 1,
-    "name": "Cola",
+    "name": "Azijn",
+    "category": "Overig",
+    "price": 10
+  },
+  {
+    "id": 2,
+    "name": "Bloem",
+    "category": "Overig",
+    "price": 10
+  },
+  {
+    "id": 3,
+    "name": "Cacao poeder",
+    "category": "Overig",
+    "price": 10
+  },
+  {
+    "id": 4,
+    "name": "Cashewnoten",
     "category": "Overig",
     "price": 5
   },
   {
-    "id": 2,
-    "name": "Water",
+    "id": 5,
+    "name": "Citroensap",
+    "category": "Overig",
+    "price": 5
+  },
+  {
+    "id": 6,
+    "name": "IJsblokje",
+    "category": "Overig",
+    "price": 10
+  },
+  {
+    "id": 7,
+    "name": "Karamel Siroop",
+    "category": "Overig",
+    "price": 10
+  },
+  {
+    "id": 8,
+    "name": "Kikkererwten",
+    "category": "Overig",
+    "price": 5
+  },
+  {
+    "id": 9,
+    "name": "Koffiebonen",
+    "category": "Overig",
+    "price": 10
+  },
+   {
+    "id": 10,
+    "name": "Olie",
     "category": "Overig",
     "price": 3
+  },
+   {
+    "id": 11,
+    "name": "Ongebakken Friet",
+    "category": "Overig",
+    "price": 10
+  },
+   {
+    "id": 12,
+    "name": "Pannenkoeken Meel",
+    "category": "Overig",
+    "price": 3
+  },
+   {
+    "id": 13,
+    "name": "Soja saus",
+    "category": "Overig",
+    "price": 10
+  },
+   {
+    "id": 14,
+    "name": "Suiker",
+    "category": "Overig",
+    "price": 10
+  },
+   {
+    "id": 15,
+    "name": "Tarwe",
+    "category": "Overig",
+    "price": 10
+  },
+  {
+    "id": 16,
+    "name": "Thee",
+    "category": "Overig",
+    "price": 10
+  },
+  {
+    "id": 17,
+    "name": "Tomaten Saus",
+    "category": "Overig",
+    "price": 10
+  },
+  {
+    "id": 18,
+    "name": "Vanille extract",
+    "category": "Overig",
+    "price": 10
+  },
+  {
+    "id": 19,
+    "name": "Zout",
+    "category": "Overig",
+    "price": 10
   }
 ]
