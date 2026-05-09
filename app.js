@@ -7,10 +7,12 @@ const categoryFiles = [
 
 let allProducts = [];
 let activeCategory = "Alles";
+let cart = [];
 
 const categoriesEl = document.getElementById("categories");
 const productsEl = document.getElementById("products");
 const searchEl = document.getElementById("search");
+const cartBtn = document.querySelector(".cart-btn");
 
 async function loadProducts() {
   for (const category of categoryFiles) {
@@ -31,7 +33,6 @@ async function loadProducts() {
 
 function renderCategories() {
   const categories = ["Alles", ...categoryFiles.map(c => c.name)];
-
   categoriesEl.innerHTML = "";
 
   categories.forEach(category => {
@@ -39,9 +40,7 @@ function renderCategories() {
     button.className = "category-btn";
     button.textContent = category;
 
-    if (category === activeCategory) {
-      button.classList.add("active");
-    }
+    if (category === activeCategory) button.classList.add("active");
 
     button.onclick = () => {
       activeCategory = category;
@@ -56,7 +55,7 @@ function renderCategories() {
 function renderProducts() {
   const search = searchEl.value.toLowerCase();
 
-  let filtered = allProducts.filter(product => {
+  const filtered = allProducts.filter(product => {
     const matchCategory =
       activeCategory === "Alles" || product.category === activeCategory;
 
@@ -68,10 +67,7 @@ function renderProducts() {
   const grouped = {};
 
   filtered.forEach(product => {
-    if (!grouped[product.category]) {
-      grouped[product.category] = [];
-    }
-
+    if (!grouped[product.category]) grouped[product.category] = [];
     grouped[product.category].push(product);
   });
 
@@ -95,8 +91,27 @@ function renderProducts() {
           <span class="tag">${product.category}</span>
           <span class="price">€${product.price}</span>
         </div>
-        <button class="add-btn">+ Toevoegen</button>
+
+        <div class="add-area">
+          <select class="amount-select">
+            <option value="1">1x</option>
+            <option value="5">5x</option>
+            <option value="10">10x</option>
+            <option value="25">25x</option>
+            <option value="50">50x</option>
+            <option value="100">100x</option>
+          </select>
+
+          <button class="add-btn">+ Toevoegen</button>
+        </div>
       `;
+
+      const select = card.querySelector(".amount-select");
+      const addBtn = card.querySelector(".add-btn");
+
+      addBtn.onclick = () => {
+        addToCart(product, Number(select.value));
+      };
 
       grid.appendChild(card);
     });
@@ -106,6 +121,50 @@ function renderProducts() {
   });
 }
 
+function addToCart(product, amount) {
+  const existingItem = cart.find(item => item.name === product.name);
+
+  if (existingItem) {
+    existingItem.amount += amount;
+  } else {
+    cart.push({
+      name: product.name,
+      category: product.category,
+      price: product.price,
+      amount
+    });
+  }
+
+  updateCartButton();
+}
+
+function updateCartButton() {
+  const totalAmount = cart.reduce((sum, item) => sum + item.amount, 0);
+  cartBtn.textContent = `Winkelwagen (${totalAmount})`;
+}
+
+function showCart() {
+  if (cart.length === 0) {
+    alert("Je winkelwagen is leeg.");
+    return;
+  }
+
+  let message = "Winkelwagen:\n\n";
+  let totalPrice = 0;
+
+  cart.forEach(item => {
+    const itemTotal = item.price * item.amount;
+    totalPrice += itemTotal;
+
+    message += `${item.amount}x ${item.name} - €${itemTotal}\n`;
+  });
+
+  message += `\nTotaal: €${totalPrice}`;
+
+  alert(message);
+}
+
 searchEl.addEventListener("input", renderProducts);
+cartBtn.addEventListener("click", showCart);
 
 loadProducts();
