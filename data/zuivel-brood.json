@@ -1,0 +1,14 @@
+[
+  {
+    "id": 24,
+    "name": "Melk",
+    "category": "Zuivel/Brood",
+    "price": 6
+  },
+  {
+    "id": 25,
+    "name": "Brood",
+    "category": "Zuivel/Brood",
+    "price": 6
+  }
+]

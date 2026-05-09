@@ -1,0 +1,14 @@
+[
+  {
+    "id": 26,
+    "name": "Zalm",
+    "category": "Vis",
+    "price": 12
+  },
+  {
+    "id": 27,
+    "name": "Tonijn",
+    "category": "Vis",
+    "price": 12
+  }
+]

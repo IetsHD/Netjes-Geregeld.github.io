@@ -1,0 +1,14 @@
+[
+  {
+    "id": 28,
+    "name": "Spaghetti",
+    "category": "Pasta",
+    "price": 7
+  },
+  {
+    "id": 29,
+    "name": "Macaroni",
+    "category": "Pasta",
+    "price": 7
+  }
+]

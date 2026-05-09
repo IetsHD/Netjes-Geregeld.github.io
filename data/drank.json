@@ -1,0 +1,14 @@
+[
+  {
+    "id": 22,
+    "name": "Cola",
+    "category": "Drank",
+    "price": 5
+  },
+  {
+    "id": 23,
+    "name": "Water",
+    "category": "Drank",
+    "price": 3
+  }
+]

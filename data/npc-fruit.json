@@ -1,11 +1,56 @@
 [
-  { "name": "Watermeloen", "category": "NPC Fruit", "price": 5 },
-  { "name": "Peer", "category": "NPC Fruit", "price": 5 },
-  { "name": "Citroen", "category": "NPC Fruit", "price": 5 },
-  { "name": "Banaan", "category": "NPC Fruit", "price": 5 },
-  { "name": "Perzik", "category": "NPC Fruit", "price": 5 },
-  { "name": "Mango", "category": "NPC Fruit", "price": 5 },
-  { "name": "Frambozen", "category": "NPC Fruit", "price": 5 },
-  { "name": "Blueberries", "category": "NPC Fruit", "price": 5 },
-  { "name": "Pasionfruit", "category": "NPC Fruit", "price": 5 }
+  {
+    "id": 1,
+    "name": "Watermeloen",
+    "category": "NPC Fruit",
+    "price": 5
+  },
+  {
+    "id": 2,
+    "name": "Peer",
+    "category": "NPC Fruit",
+    "price": 5
+  },
+  {
+    "id": 3,
+    "name": "Citroen",
+    "category": "NPC Fruit",
+    "price": 5
+  },
+  {
+    "id": 4,
+    "name": "Banaan",
+    "category": "NPC Fruit",
+    "price": 5
+  },
+  {
+    "id": 5,
+    "name": "Perzik",
+    "category": "NPC Fruit",
+    "price": 5
+  },
+  {
+    "id": 6,
+    "name": "Mango",
+    "category": "NPC Fruit",
+    "price": 5
+  },
+  {
+    "id": 7,
+    "name": "Frambozen",
+    "category": "NPC Fruit",
+    "price": 5
+  },
+  {
+    "id": 8,
+    "name": "Blueberries",
+    "category": "NPC Fruit",
+    "price": 5
+  },
+  {
+    "id": 9,
+    "name": "Pasionfruit",
+    "category": "NPC Fruit",
+    "price": 5
+  }
 ]

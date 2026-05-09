@@ -1,6 +1,26 @@
 [
-  { "name": "Pompoen", "category": "Groenten Pluk", "price": 10 },
-  { "name": "Aardappelen", "category": "Groenten Pluk", "price": 10 },
-  { "name": "Tomaat", "category": "Groenten Pluk", "price": 10 },
-  { "name": "Wortel", "category": "Groenten Pluk", "price": 10 }
+  {
+    "id": 18,
+    "name": "Pompoen",
+    "category": "Groenten Pluk",
+    "price": 10
+  },
+  {
+    "id": 19,
+    "name": "Aardappelen",
+    "category": "Groenten Pluk",
+    "price": 10
+  },
+  {
+    "id": 20,
+    "name": "Tomaat",
+    "category": "Groenten Pluk",
+    "price": 10
+  },
+  {
+    "id": 21,
+    "name": "Wortel",
+    "category": "Groenten Pluk",
+    "price": 10
+  }
 ]

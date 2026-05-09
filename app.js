@@ -26,7 +26,7 @@ let cart = loadCart();
 let activeCategory = "Alles";
 let searchTerm = "";
 
-const quantityOptions = [1, 2, 3, 4, 5, 10, 15, 20];
+const quantityOptions = [25, 50, 100, 200];
 
 init();
 
@@ -52,21 +52,41 @@ async function init() {
 }
 
 async function loadProducts() {
-  try {
-    const response = await fetch("products.json");
+  const categoryFiles = [
+    "data/npc-fruit.json",
+    "data/fruit-pluk.json",
+    "data/vlees-vis.json",
+    "data/groenten-pluk.json",
+    "data/drank.json",
+    "data/zuivel-brood.json",
+    "data/vis.json",
+    "data/pasta.json"
+  ];
 
-    if (!response.ok) {
-      throw new Error("products.json kon niet geladen worden.");
+  try {
+    const responses = await Promise.all(
+      categoryFiles.map(file => fetch(file))
+    );
+
+    const failedResponse = responses.find(response => !response.ok);
+
+    if (failedResponse) {
+      throw new Error("Eén of meerdere JSON-bestanden konden niet geladen worden.");
     }
 
-    const jsonProducts = await response.json();
+    const productGroups = await Promise.all(
+      responses.map(response => response.json())
+    );
+
+    const jsonProducts = productGroups.flat();
+
     products = [...jsonProducts, ...customProducts];
   } catch (error) {
     console.error(error);
 
     productList.innerHTML = `
       <div class="empty-state">
-        Producten konden niet geladen worden. Controleer of products.json naast index.html staat.
+        Producten konden niet geladen worden. Controleer of alle JSON-bestanden in de map data staan.
       </div>
     `;
   }
