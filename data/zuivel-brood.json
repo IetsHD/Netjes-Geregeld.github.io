@@ -1,14 +1,56 @@
 [
   {
-    "id": 24,
-    "name": "Melk",
+    "id": 1,
+    "name": "Boter",
     "category": "Zuivel/Brood",
-    "price": 6
+    "price": 5
   },
   {
-    "id": 25,
-    "name": "Brood",
+    "id": 2,
+    "name": "Hamburger broodje",
     "category": "Zuivel/Brood",
-    "price": 6
+    "price": 5
+  },
+  {
+    "id": 3,
+    "name": "Melk",
+    "category": "Zuivel/Brood",
+    "price": 5
+  },
+  {
+    "id": 4,
+    "name": "Parmezaanse Kaas",
+    "category": "Zuivel/Brood",
+    "price": 5
+  },
+  {
+    "id": 5,
+    "name": "Room",
+    "category": "Zuivel/Brood",
+    "price": 5
+  },
+  {
+    "id": 6,
+    "name": "Slagroom",
+    "category": "Zuivel/Brood",
+    "price": 5
+  },
+  {
+    "id": 7,
+    "name": "Vegetarische Kaas",
+    "category": "Zuivel/Brood",
+    "price": 5
+  },
+  {
+    "id": 8,
+    "name": "Verse Mozzarella",
+    "category": "Zuivel/Brood",
+    "price": 5
+  },
+  {
+    "id": 9,
+    "name": "Witte Bollen",
+    "category": "Zuivel/Brood",
+    "price": 5
   }
 ]

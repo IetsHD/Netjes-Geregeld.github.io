@@ -1,14 +1,20 @@
 [
   {
-    "id": 26,
-    "name": "Zalm",
+    "id": 1,
+    "name": "Vers Krabvlees",
     "category": "Vis",
-    "price": 12
+    "price": 5
   },
   {
-    "id": 27,
-    "name": "Tonijn",
+    "id": 2,
+    "name": "Zeevruchten",
     "category": "Vis",
-    "price": 12
+    "price": 5
+  },
+  {
+    "id": 3,
+    "name": "Zeewier Folie",
+    "category": "Vis",
+    "price": 5
   }
 ]

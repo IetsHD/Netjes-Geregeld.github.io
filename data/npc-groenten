@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Basilicum",
+    "category": "NPC Groenten",
+    "price": 5
+  },
+  {
+    "id": 2,
+    "name": "Broccoli",
+    "category": "NPC Groenten",
+    "price": 5
+  },
+  {
+    "id": 3,
+    "name": "Champignons",
+    "category": "NPC Groenten",
+    "price": 5
+  },
+  {
+    "id": 4,
+    "name": "Knoflook",
+    "category": "NPC Groenten",
+    "price": 5
+  },
+  {
+    "id": 5,
+    "name": "Komkommer",
+    "category": "NPC Groenten",
+    "price": 5
+  },
+  {
+    "id": 6,
+    "name": "Lente-Ui",
+    "category": "NPC Groenten",
+    "price": 5
+  },
+  {
+    "id": 7,
+    "name": "Mais",
+    "category": "NPC Groenten",
+    "price": 5
+  },
+  {
+    "id": 8,
+    "name": "Sla",
+    "category": "NPC Groenten",
+    "price": 5
+  },
+  {
+    "id": 9,
+    "name": "Ui",
+    "category": "NPC Groenten",
+    "price": 5
+  },
+  {
+    "id": 10,
+    "name": "Ui",
+    "category": "NPC Groenten",
+    "price": 5
+  }
+]

@@ -1,0 +1,140 @@
+[
+  {
+    "id": 1,
+    "name": "Ambachts Kruiden",
+    "category": "Spices",
+    "price": 50
+  },
+  {
+    "id": 2,
+    "name": "Botanische Voeding",
+    "category": "Spices",
+    "price": 50
+  },
+  {
+    "id": 3,
+    "name": "Chemische Reagens",
+    "category": "Spices",
+    "price": 50
+  },
+  {
+    "id": 4,
+    "name": "Coureur Kruiden",
+    "category": "Spices",
+    "price": 50
+  },
+  {
+    "id": 5,
+    "name": "Crimineel Extract",
+    "category": "Spices",
+    "price": 50
+  },
+  {
+    "id": 6,
+    "name": "Duik Zout",
+    "category": "Spices",
+    "price": 50
+  },
+  {
+    "id": 7,
+    "name": "Houthakkers Sap",
+    "category": "Spices",
+    "price": 50
+  },
+  {
+    "id": 8,
+    "name": "Inbrekers Specerijen",
+    "category": "Spices",
+    "price": 50
+  },
+  {
+    "id": 9,
+    "name": "Kluiskrakers Kruidemix",
+    "category": "Spices",
+    "price": 50
+  },
+   {
+    "id": 10,
+    "name": "Lockpick Olie",
+    "category": "Spices",
+    "price": 3
+  },
+   {
+    "id": 11,
+    "name": "Long Kruiden",
+    "category": "Spices",
+    "price": 50
+  },
+   {
+    "id": 12,
+    "name": "Mijnwerkers Kruiden",
+    "category": "Spices",
+    "price": 3
+  },
+   {
+    "id": 13,
+    "name": "Mysterie Kruiden",
+    "category": "Spices",
+    "price": 50
+  },
+   {
+    "id": 14,
+    "name": "Overval Kruiden",
+    "category": "Spices",
+    "price": 50
+  },
+   {
+    "id": 150,
+    "name": "Scherpschutter Mix",
+    "category": "Spices",
+    "price": 50
+  },
+  {
+    "id": 16,
+    "name": "Skimming Kruiden",
+    "category": "Spices",
+    "price": 50
+  },
+  {
+    "id": 17,
+    "name": "Sloop Kruiden",
+    "category": "Spices",
+    "price": 50
+  },
+  {
+    "id": 18,
+    "name": "Speurneus Extract",
+    "category": "Spices",
+    "price": 50
+  },
+  {
+    "id": 19,
+    "name": "Spierversterker",
+    "category": "Spices",
+    "price": 50
+  },
+  {
+    "id": 20,
+    "name": "Straat Aroma",
+    "category": "Spices",
+    "price": 50
+  },
+  {
+    "id": 21,
+    "name": "Uithoudings Suiker",
+    "category": "Spices",
+    "price": 50
+  },
+  {
+    "id": 22,
+    "name": "Vissers Lokmiddel",
+    "category": "Spices",
+    "price": 50
+  },
+  {
+    "id": 23,
+    "name": "Witwas Poeder",
+    "category": "Spices",
+    "price": 50
+  }
+]
