@@ -1,116 +1,83 @@
-<!doctype html>
+<!-- index.html -->
+<!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Netjes Geregeld - Boodschappenlijst</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Netjes Geregeld</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header class="topbar">
-    <div class="brand">
-      <div class="logo">NG</div>
-
-      <div>
-        <h1>Netjes Geregeld</h1>
-        <p>Boodschappenlijst</p>
-      </div>
+    <div>
+      <h1>Netjes Geregeld</h1>
+      <p>Boodschappenlijst</p>
     </div>
 
-    <div class="actions">
-      <button id="newProductBtn" class="btn btn-dark">
-        + Nieuw Product
-      </button>
-
-      <button id="cartBtn" class="btn btn-green">
-        Winkelwagen
-        <span id="cartCount"></span>
-      </button>
+    <div class="top-actions">
+      <button class="outline-btn">+ Nieuw Product</button>
+      <button class="green-btn">Winkelwagen</button>
     </div>
   </header>
 
   <main class="container">
 
     <input
-      id="searchInput"
+      type="text"
       class="search"
-      type="search"
       placeholder="Zoek producten..."
-    />
+    >
 
-    <nav id="categoryFilters" class="chips"></nav>
+    <div class="categories">
+      <button class="cat active">Alles</button>
+      <button class="cat">NPC Fruit</button>
+      <button class="cat">Fruit Pluk</button>
+      <button class="cat">Vlees/Vis</button>
+      <button class="cat">Groenten Pluk</button>
+    </div>
 
-    <section id="productSections"></section>
+    <section class="section">
+      <h2>NPC Fruit</h2>
+
+      <div class="grid">
+
+        <div class="card">
+          <div>
+            <h3>Watermeloen</h3>
+            <span class="tag yellow">NPC Fruit</span>
+            <p class="price">€5</p>
+          </div>
+
+          <button class="add-btn">+ Toevoegen</button>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>Peer</h3>
+            <span class="tag yellow">NPC Fruit</span>
+            <p class="price">€5</p>
+          </div>
+
+          <button class="add-btn">+ Toevoegen</button>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>Citroen</h3>
+            <span class="tag yellow">NPC Fruit</span>
+            <p class="price">€5</p>
+          </div>
+
+          <button class="add-btn">+ Toevoegen</button>
+        </div>
+
+      </div>
+    </section>
 
   </main>
 
-  <!-- Winkelwagen -->
-  <dialog id="cartDialog">
-
-    <div class="dialog-head">
-      <h2>Winkelwagen</h2>
-
-      <button class="icon-btn" data-close>
-        ×
-      </button>
-    </div>
-
-    <div id="cartItems"></div>
-
-    <div class="cart-total">
-      <span>Totaal</span>
-      <strong id="cartTotal">€0</strong>
-    </div>
-
-    <button id="clearCartBtn" class="btn btn-dark full">
-      Winkelwagen legen
-    </button>
-
-  </dialog>
-
-  <!-- Nieuw Product -->
-  <dialog id="productDialog">
-
-    <div class="dialog-head">
-      <h2>Nieuw product</h2>
-
-      <button class="icon-btn" data-close>
-        ×
-      </button>
-    </div>
-
-    <form id="productForm" class="form">
-
-      <label>
-        Naam
-        <input name="name" required />
-      </label>
-
-      <label>
-        Categorie
-        <input name="category" required />
-      </label>
-
-      <label>
-        Prijs
-        <input
-          name="price"
-          required
-          type="number"
-          min="0"
-        />
-      </label>
-
-      <button class="btn btn-green full">
-        Product toevoegen
-      </button>
-
-    </form>
-
-  </dialog>
-
-  <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
