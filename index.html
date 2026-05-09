@@ -1,83 +1,121 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="nl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Netjes Geregeld</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netjes Geregeld - Boodschappenlijst</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header class="topbar">
-    <div>
-      <h1>Netjes Geregeld</h1>
-      <p>Boodschappenlijst</p>
+    <div class="brand">
+      <div class="logo">
+        <img src="logo.png" alt="Netjes Geregeld logo" onerror="this.style.display='none'" />
+      </div>
+
+      <div>
+        <h1>Netjes Geregeld</h1>
+        <p>Boodschappenlijst</p>
+      </div>
     </div>
 
     <div class="top-actions">
-      <button class="outline-btn">+ Nieuw Product</button>
-      <button class="green-btn">Winkelwagen</button>
+      <button class="secondary-button" id="newProductBtn">
+        <span>＋</span>
+        Nieuw Product
+      </button>
+
+      <button class="cart-button" id="openCartBtn">
+        🛒 Winkelwagen
+        <span id="cartCount" class="cart-count">0</span>
+      </button>
     </div>
   </header>
 
   <main class="container">
-
-    <input
-      type="text"
-      class="search"
-      placeholder="Zoek producten..."
-    >
-
-    <div class="categories">
-      <button class="cat active">Alles</button>
-      <button class="cat">NPC Fruit</button>
-      <button class="cat">Fruit Pluk</button>
-      <button class="cat">Vlees/Vis</button>
-      <button class="cat">Groenten Pluk</button>
-    </div>
-
-    <section class="section">
-      <h2>NPC Fruit</h2>
-
-      <div class="grid">
-
-        <div class="card">
-          <div>
-            <h3>Watermeloen</h3>
-            <span class="tag yellow">NPC Fruit</span>
-            <p class="price">€5</p>
-          </div>
-
-          <button class="add-btn">+ Toevoegen</button>
-        </div>
-
-        <div class="card">
-          <div>
-            <h3>Peer</h3>
-            <span class="tag yellow">NPC Fruit</span>
-            <p class="price">€5</p>
-          </div>
-
-          <button class="add-btn">+ Toevoegen</button>
-        </div>
-
-        <div class="card">
-          <div>
-            <h3>Citroen</h3>
-            <span class="tag yellow">NPC Fruit</span>
-            <p class="price">€5</p>
-          </div>
-
-          <button class="add-btn">+ Toevoegen</button>
-        </div>
-
+    <section class="toolbar">
+      <div class="search-wrap">
+        <span>🔍</span>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Zoek producten..."
+          autocomplete="off"
+        />
       </div>
+
+      <div id="categoryFilters" class="category-filters"></div>
     </section>
 
+    <section id="productList" class="product-list"></section>
   </main>
 
-<script src="script.js"></script>
+  <!-- Winkelwagen scherm -->
+  <aside class="cart-screen" id="cartScreen" aria-hidden="true">
+    <div class="cart-panel">
+      <div class="cart-header">
+        <div>
+          <h2>Winkelwagen</h2>
+          <p>Overzicht van je boodschappen</p>
+        </div>
+
+        <button class="icon-button" id="closeCartBtn" aria-label="Sluit winkelwagen">
+          ✕
+        </button>
+      </div>
+
+      <div id="cartItems" class="cart-items"></div>
+
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>Aantal producten</span>
+          <strong id="summaryItems">0</strong>
+        </div>
+
+        <div class="summary-row total">
+          <span>Totaal</span>
+          <strong id="summaryTotal">€0</strong>
+        </div>
+
+        <button class="danger-button" id="clearCartBtn">
+          Winkelwagen leegmaken
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Nieuw product modal -->
+  <aside class="modal-screen" id="productModal" aria-hidden="true">
+    <form class="modal-panel" id="productForm">
+      <div class="modal-header">
+        <h2>Nieuw Product</h2>
+        <button type="button" class="icon-button" id="closeProductModalBtn">
+          ✕
+        </button>
+      </div>
+
+      <label>
+        Productnaam
+        <input type="text" id="newProductName" required placeholder="Bijvoorbeeld: Druiven" />
+      </label>
+
+      <label>
+        Categorie
+        <input type="text" id="newProductCategory" required placeholder="Bijvoorbeeld: NPC Fruit" />
+      </label>
+
+      <label>
+        Prijs
+        <input type="number" id="newProductPrice" required min="0" step="1" placeholder="5" />
+      </label>
+
+      <button type="submit" class="cart-button full-width">
+        Product toevoegen
+      </button>
+    </form>
+  </aside>
+
+  <script src="app.js"></script>
 </body>
 </html>

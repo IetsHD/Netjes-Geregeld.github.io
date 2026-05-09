@@ -1,0 +1,176 @@
+[
+  {
+    "id": 1,
+    "name": "Watermeloen",
+    "category": "NPC Fruit",
+    "price": 5
+  },
+  {
+    "id": 2,
+    "name": "Peer",
+    "category": "NPC Fruit",
+    "price": 5
+  },
+  {
+    "id": 3,
+    "name": "Citroen",
+    "category": "NPC Fruit",
+    "price": 5
+  },
+  {
+    "id": 4,
+    "name": "Banaan",
+    "category": "NPC Fruit",
+    "price": 5
+  },
+  {
+    "id": 5,
+    "name": "Perzik",
+    "category": "NPC Fruit",
+    "price": 5
+  },
+  {
+    "id": 6,
+    "name": "Mango",
+    "category": "NPC Fruit",
+    "price": 5
+  },
+  {
+    "id": 7,
+    "name": "Frambozen",
+    "category": "NPC Fruit",
+    "price": 5
+  },
+  {
+    "id": 8,
+    "name": "Blueberries",
+    "category": "NPC Fruit",
+    "price": 5
+  },
+  {
+    "id": 9,
+    "name": "Pasionfruit",
+    "category": "NPC Fruit",
+    "price": 5
+  },
+  {
+    "id": 10,
+    "name": "Aardbei",
+    "category": "Fruit Pluk",
+    "price": 10
+  },
+  {
+    "id": 11,
+    "name": "Appel",
+    "category": "Fruit Pluk",
+    "price": 10
+  },
+  {
+    "id": 12,
+    "name": "Ananas",
+    "category": "Fruit Pluk",
+    "price": 10
+  },
+  {
+    "id": 13,
+    "name": "Sinaasappel",
+    "category": "Fruit Pluk",
+    "price": 10
+  },
+  {
+    "id": 14,
+    "name": "Kip",
+    "category": "Vlees/Vis",
+    "price": 10
+  },
+  {
+    "id": 15,
+    "name": "Varken",
+    "category": "Vlees/Vis",
+    "price": 10
+  },
+  {
+    "id": 16,
+    "name": "Rood vlees",
+    "category": "Vlees/Vis",
+    "price": 10
+  },
+  {
+    "id": 17,
+    "name": "Kalkoen",
+    "category": "Vlees/Vis",
+    "price": 10
+  },
+  {
+    "id": 18,
+    "name": "Pompoen",
+    "category": "Groenten Pluk",
+    "price": 10
+  },
+  {
+    "id": 19,
+    "name": "Aardappelen",
+    "category": "Groenten Pluk",
+    "price": 10
+  },
+  {
+    "id": 20,
+    "name": "Tomaat",
+    "category": "Groenten Pluk",
+    "price": 10
+  },
+  {
+    "id": 21,
+    "name": "Wortel",
+    "category": "Groenten Pluk",
+    "price": 10
+  },
+  {
+    "id": 22,
+    "name": "Cola",
+    "category": "Drank",
+    "price": 5
+  },
+  {
+    "id": 23,
+    "name": "Water",
+    "category": "Drank",
+    "price": 3
+  },
+  {
+    "id": 24,
+    "name": "Melk",
+    "category": "Zuivel/Brood",
+    "price": 6
+  },
+  {
+    "id": 25,
+    "name": "Brood",
+    "category": "Zuivel/Brood",
+    "price": 6
+  },
+  {
+    "id": 26,
+    "name": "Zalm",
+    "category": "Vis",
+    "price": 12
+  },
+  {
+    "id": 27,
+    "name": "Tonijn",
+    "category": "Vis",
+    "price": 12
+  },
+  {
+    "id": 28,
+    "name": "Spaghetti",
+    "category": "Pasta",
+    "price": 7
+  },
+  {
+    "id": 29,
+    "name": "Macaroni",
+    "category": "Pasta",
+    "price": 7
+  }
+]
