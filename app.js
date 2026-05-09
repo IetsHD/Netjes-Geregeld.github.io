@@ -58,6 +58,7 @@ async function loadProducts() {
     "data/vlees-vis.json",
     "data/groenten-pluk.json",
     "data/drank.json",
+    "data/overig.json",
     "data/zuivel-brood.json",
     "data/vis.json",
     "data/pasta.json"

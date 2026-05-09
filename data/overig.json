@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Cola",
+    "category": "Overig",
+    "price": 5
+  },
+  {
+    "id": 2,
+    "name": "Water",
+    "category": "Overig",
+    "price": 3
+  }
+]
