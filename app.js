@@ -62,7 +62,7 @@ async function loadProducts() {
     "data/overig.json",
     "data/zuivel-brood.json",
     "data/vis.json",
-    "data/pasta.json"
+    "data/spices.json"
   ];
 
   try {
