@@ -270,65 +270,45 @@ button {
 .add-control {
   display: flex;
   align-items: center;
-  background: var(--green);
-  border-radius: 999px;
-  overflow: visible;
-  position: relative;
+  gap: 8px;
   flex-shrink: 0;
+}
+
+.add-control.input-mode {
+  background: transparent;
+}
+
+.quantity-input {
+  width: 72px;
+  height: 42px;
+  border: 1px solid var(--border);
+  background: #131923;
+  color: white;
+  border-radius: 999px;
+  padding: 0 12px;
+  outline: 0;
+  font-weight: 800;
+  text-align: center;
+}
+
+.quantity-input:focus {
+  border-color: var(--green);
 }
 
 .add-button {
   border: 0;
   color: white;
-  background: transparent;
-  padding: 11px 18px;
+  background: var(--green);
+  border-radius: 999px;
+  padding: 12px 18px;
   font-weight: 800;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.quantity-toggle {
-  width: 42px;
-  align-self: stretch;
-  border: 0;
-  border-left: 2px solid rgba(255, 255, 255, 0.35);
-  color: white;
-  background: transparent;
-  font-size: 16px;
-}
-
-.quantity-menu {
-  position: absolute;
-  right: 0;
-  top: calc(100% + 8px);
-  background: #0f172a;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  border-radius: 12px;
-  padding: 8px;
-  display: none;
-  z-index: 10;
-  min-width: 130px;
-}
-
-.quantity-menu.open {
-  display: grid;
-  gap: 6px;
-}
-
-.quantity-option {
-  border: 0;
-  background: var(--panel-light);
-  color: white;
-  border-radius: 8px;
-  padding: 9px 12px;
-  text-align: left;
-  font-weight: 700;
-}
-
-.quantity-option:hover {
-  background: var(--green);
+.add-button:hover {
+  background: var(--green-dark);
 }
 
 .empty-state {
@@ -548,14 +528,18 @@ button {
     flex-direction: column;
   }
 
-  .add-control {
-    width: 100%;
-  }
+.add-control {
+  width: 100%;
+}
 
-  .add-button {
-    flex: 1;
-    justify-content: center;
-  }
+.quantity-input {
+  width: 84px;
+}
+
+.add-button {
+  flex: 1;
+  justify-content: center;
+}
 
   .cart-panel {
     width: 100vw;

@@ -26,8 +26,6 @@ let cart = loadCart();
 let activeCategory = "Alles";
 let searchTerm = "";
 
-const quantityOptions = [25, 50, 100, 200];
-
 init();
 
 async function init() {
@@ -48,7 +46,6 @@ async function init() {
   productModal.addEventListener("click", handleProductModalBackdropClick);
   productForm.addEventListener("submit", handleNewProduct);
 
-  document.addEventListener("click", closeQuantityMenusOnOutsideClick);
 }
 
 async function loadProducts() {
@@ -159,39 +156,21 @@ function renderProducts() {
     })
     .join("");
 
-  document.querySelectorAll(".add-button").forEach(button => {
-    button.addEventListener("click", () => {
-      const productId = Number(button.dataset.id);
+document.querySelectorAll(".add-button").forEach(button => {
+  button.addEventListener("click", () => {
+    const productId = Number(button.dataset.id);
+    const input = document.querySelector(`.quantity-input[data-id="${productId}"]`);
+    const quantity = Number(input.value);
+
+    if (!Number.isInteger(quantity) || quantity < 1) {
+      input.value = 1;
       addToCart(productId, 1);
-    });
+      return;
+    }
+
+    addToCart(productId, quantity);
   });
-
-  document.querySelectorAll(".quantity-toggle").forEach(button => {
-    button.addEventListener("click", event => {
-      event.stopPropagation();
-
-      const menu = button.nextElementSibling;
-      const isOpen = menu.classList.contains("open");
-
-      closeAllQuantityMenus();
-
-      if (!isOpen) {
-        menu.classList.add("open");
-      }
-    });
-  });
-
-  document.querySelectorAll(".quantity-option").forEach(button => {
-    button.addEventListener("click", event => {
-      event.stopPropagation();
-
-      const productId = Number(button.dataset.id);
-      const quantity = Number(button.dataset.quantity);
-
-      addToCart(productId, quantity);
-      closeAllQuantityMenus();
-    });
-  });
+});
 }
 
 function createProductCard(product) {
@@ -213,32 +192,21 @@ function createProductCard(product) {
         </div>
       </div>
 
-      <div class="add-control">
+      <div class="add-control input-mode">
+        <input
+          class="quantity-input"
+          type="number"
+          min="1"
+          step="1"
+          value="1"
+          aria-label="Aantal voor ${escapeHtml(product.name)}"
+          data-id="${product.id}"
+        />
+
         <button class="add-button" data-id="${product.id}">
           <span>＋</span>
           Toevoegen
         </button>
-
-        <button class="quantity-toggle" type="button" aria-label="Kies aantal">
-          ⌄
-        </button>
-
-        <div class="quantity-menu">
-          ${quantityOptions
-            .map(quantity => {
-              return `
-                <button
-                  class="quantity-option"
-                  type="button"
-                  data-id="${product.id}"
-                  data-quantity="${quantity}"
-                >
-                  ${quantity}x toevoegen
-                </button>
-              `;
-            })
-            .join("")}
-        </div>
       </div>
     </article>
   `;
@@ -499,16 +467,6 @@ function formatPrice(price) {
     currency: "EUR",
     maximumFractionDigits: 0
   }).format(price);
-}
-
-function closeQuantityMenusOnOutsideClick() {
-  closeAllQuantityMenus();
-}
-
-function closeAllQuantityMenus() {
-  document.querySelectorAll(".quantity-menu.open").forEach(menu => {
-    menu.classList.remove("open");
-  });
 }
 
 function saveCart() {
